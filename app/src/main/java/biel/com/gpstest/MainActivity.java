@@ -171,8 +171,14 @@ public class MainActivity extends AppCompatActivity {
         public void onLocationChanged(Location location) {
             Location pointLocation = retrievelocationFromPreferences();
             float distance = location.distanceTo(pointLocation);
-            Toast.makeText(MainActivity.this,
-                    "Distance from Point:"+distance, Toast.LENGTH_LONG).show();
+            if(distance < 500){
+                Toast.makeText(MainActivity.this,
+                        "Distance from Point:"+distance, Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(MainActivity.this,
+                        "Distance from Point:"+distance, Toast.LENGTH_LONG).show();
+            }
+
         }
         public void onStatusChanged(String s, int i, Bundle b) {
             Log.i("Main", s);

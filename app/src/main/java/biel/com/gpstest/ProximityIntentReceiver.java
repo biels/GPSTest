@@ -17,6 +17,12 @@ import android.util.Log;
 public class ProximityIntentReceiver extends BroadcastReceiver {
     private static final String TAG = "ProximityIntentReceiver";
     private static final int NOTIFICATION_ID = 800;
+    {
+        Log.i("ProximityIntentReceiver", "Instantiated");
+    }
+    static {
+        Log.i("ProximityIntentReceiver", "Loaded");
+    }
     @Override
     public void onReceive(Context context, Intent intent) {
         String key = LocationManager.KEY_PROXIMITY_ENTERING;
